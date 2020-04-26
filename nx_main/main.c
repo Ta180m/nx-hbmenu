@@ -243,8 +243,8 @@ bool menuUpdate(void) {
 
         if (down & KEY_LEFT) move--;
         if (down & KEY_RIGHT) move++;
-        if (down & KEY_DOWN) move-=entries_count;
-        if (down & KEY_UP) move+=entries_count;
+        if (down & KEY_DOWN) move+=entries_count;
+        if (down & KEY_UP) move-=entries_count;
 
         int newEntry = menu->curEntry + move;
         if (newEntry < 0) newEntry = 0;
